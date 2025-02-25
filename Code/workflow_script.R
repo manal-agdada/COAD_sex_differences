@@ -23,13 +23,13 @@ grViz("
     }
 
     subgraph cluster_dea {
-      label = 'Differential Expression Analysis'
+      label = ''
       style=dashed
       color= '#625a5a'
       fontname = 'helvetica-bold'
 
       node [shape=rectangle, style=filled, color=black, fillcolor = '#fee08b', fontcolor = '#2a6496']
-      dea_analysis [label = '327 DEGs\n(122 Down, 205 Up)']
+      dea_analysis [label = 'Differential expression analysis\n327 DEGs\n(122 Down, 205 Up)']
 
       normalization -> dea_analysis
     }
