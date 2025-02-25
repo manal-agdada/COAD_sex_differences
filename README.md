@@ -41,7 +41,7 @@ This project is carried out using R 4.4.2 and the following R packages:
 
 ## **Data sources and workflow of the analysis**
 
-![workflow](https://raw.githubusercontent.com/manal-agdada/TCGA_COAD_sex_differences/main/workflow.pdf)
+![workflow](https://github.com/manal-agdada/TCGA_COAD_sex_differences/blob/main/Figures/workflow.png)
 
 
 ### **Preprocessing, normalization, and filtering**
