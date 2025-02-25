@@ -16,7 +16,7 @@ Specifically, this study investigates whether sex-specific gene expression patte
 
 ```
 TCGA_COAD_sex_differences/
-│-- Code/     # script for the analysis
+│-- Code/     # contains a script to reproduce the workflow and a script for the analysis
 │-- Figures/  # figures produced by the script
 │-- LICENSE
 │-- README.md
