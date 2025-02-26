@@ -64,6 +64,8 @@ The gene expression matrix comprises of 475 samples and 60660 genes. Normalizati
 
 ## **Discussion and Conclusion**
 
+### **Limitations of the study**
+
 ## **References**
 
 1. Wu Z, Huang Y, Zhang R, Zheng C, You F, Wang M, Xiao C, Li X. **Sex differences in colorectal cancer: with a focus on sex hormone-gut microbiome axis.** Cell Commun Signal. 2024 Mar 7;22(1):167. doi: 10.1186/s12964-024-01549-2. PMID: 38454453; PMCID: PMC10921775.
