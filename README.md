@@ -41,10 +41,20 @@ This project is carried out using R 4.4.2 and the following R packages:
 
 ## **Data sources and workflow of the analysis**
 
+RNA-seq data of the TCGA-COAD cohort was downloaded directly into R using the Bioconductor package `TCGAbiolinks`. 
+
 ![workflow](https://github.com/manal-agdada/TCGA_COAD_sex_differences/blob/main/Figures/workflow.png)
 
 
 ### **Preprocessing, normalization, and filtering**
+
+Only primary tumors samples were downloaded excluding normal and metastasis samples with a total of 481 samples. Also, samples from patients that were subjected to prior treatments before the collection and sequencing were excluded. The clinical covariantes considered in this study are the following: sex, age, race, prior malignancy, tumor site, tumor stage, OS time, and survival status. Therefore, samples with missing data were excluded, rounding up a total of 475 samples (250 male samples and 225 female samples).
+
+Below, a demographics of the cohort under study is presented.
+
+![table1]()
+
+The gene expression matrix comprises of 475 samples and 60660 genes. Normalization was applied using the `TCGAanalyze_Normalization` function from the `TCGAbiolinks` package accounting for sequencing depth and gene length. After normalization, 38676 genes were removed as lowly expressed genes, rounding up to a total of 21984 genes that will be used for subsequent analysis.
 
 ### **Differential expression analysis**
 
