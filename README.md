@@ -17,6 +17,7 @@ Specifically, this study investigates whether sex-specific gene expression patte
 ```
 TCGA_COAD_sex_differences/
 │-- Code/     # contains a script to reproduce the workflow and a script for the analysis
+│-- Data/     # contains unprocessed and processed metadata
 │-- Figures/  # figures produced by the script
 │-- LICENSE
 │-- README.md
@@ -38,23 +39,34 @@ This project is carried out using R 4.4.2 and the following R packages:
   - `prodlim`
   - `survival`
   - `kableExtra`
+  - `DiagrammeR`
 
 ## **Data sources and workflow of the analysis**
 
-RNA-seq data of the TCGA-COAD cohort was downloaded directly into R using the Bioconductor package `TCGAbiolinks`. 
+RNA-seq data of the TCGA-COAD cohort was downloaded directly into R using the Bioconductor package `TCGAbiolinks`. Metadata with survival information was downloaded from UCSC XENA and can be found [here]() alongside the processed metadata dataframe used for the analysis in this study.
+
+Only primary tumor samples were directly downloaded to avoid biases from the presence of normal or metastatic samples.
+
+Below, a schematic of the pipeline used in the analysis is presented. In particular, the analysis consists of:
+
+1. Data selection, preprocessing, normalization, and filtering
+2. Differential expression analysis using the pipeline edgeR
+3. Functional enrichment analysis
+4. Survival analysis with Cox PH regression models and Kaplan-Meier curves
 
 ![workflow](https://github.com/manal-agdada/TCGA_COAD_sex_differences/blob/main/Figures/workflow.png)
 
 
-### **Preprocessing, normalization, and filtering**
+### **Selection, preprocessing, normalization, and filtering**
 
-Only primary tumors samples were downloaded excluding normal and metastasis samples with a total of 481 samples. Also, samples from patients that were subjected to prior treatments before the collection and sequencing were excluded. The clinical covariantes considered in this study are the following: sex, age, race, prior malignancy, tumor site, tumor stage, OS time, and survival status. Therefore, samples with missing data were excluded, rounding up a total of 475 samples (250 male samples and 225 female samples).
+Only primary tumors samples were downloaded excluding normal and metastasis samples with a total of 481 samples. Also, samples from patients that were subjected to prior treatments before the collection and sequencing were excluded. 
+The clinical covariantes considered in this study are the following: sex, age, race, prior malignancy, tumor site, tumor stage, OS time, and survival status. Therefore, samples with missing data were excluded, rounding up a total of 475 samples (250 male samples and 225 female samples).
 
-Below, a demographics of the cohort under study is presented.
+Below, a demographics of the cohort under study is presented stratified by sex. For simplicity, the Tumor Stage covariate was grouped as Stage I, Stage II, Stage III, Stage IV, and NA.
 
 ![table1]()
 
-The gene expression matrix comprises of 475 samples and 60660 genes. Normalization was applied using the `TCGAanalyze_Normalization` function from the `TCGAbiolinks` package accounting for sequencing depth and gene length. After normalization, 38676 genes were removed as lowly expressed genes, rounding up to a total of 21984 genes that will be used for subsequent analysis.
+The gene expression matrix under study comprises of 475 samples and 60660 genes. Normalization was applied using the `TCGAanalyze_Normalization` function from the `TCGAbiolinks` package accounting for sequencing depth and gene length. After normalization, 38676 genes were removed as lowly expressed genes, rounding up to a total of 21984 genes that will be used for subsequent analysis.
 
 ### **Differential expression analysis**
 
