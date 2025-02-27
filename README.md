@@ -18,7 +18,7 @@ Specifically, this study investigates whether sex-specific gene expression patte
 TCGA_COAD_sex_differences/
 │-- Code/     # contains a script to reproduce the workflow and a script for the analysis
 │-- Data/     # contains unprocessed and processed metadata
-│-- Figures/  # figures produced by the script
+│-- Figures/  # contains figures produced by the script
 │-- LICENSE
 │-- README.md
 ```
@@ -59,10 +59,10 @@ Below, a schematic of the pipeline used in the analysis is presented. In particu
 
 ### **Selection, preprocessing, normalization, and filtering**
 
-Only primary tumors samples were downloaded excluding normal and metastasis samples with a total of 481 samples. Also, samples from patients that were subjected to prior treatments before the collection and sequencing were excluded. 
-The clinical covariantes considered in this study are the following: sex, age, race, prior malignancy, tumor site, tumor stage, OS time, and survival status. Therefore, samples with missing data were excluded, rounding up a total of 475 samples (250 male samples and 225 female samples).
+Only primary tumors samples were downloaded excluding normal and metastasis samples with a total of 474 samples. Also, samples from patients that were subjected to prior treatments before the collection and sequencing were excluded. 
+The clinical covariantes considered in this study are the following: sex, age, race, prior malignancy, tumor site, tumor stage, OS time, and survival status. Therefore, samples with missing data were excluded, rounding up a total of 468 samples (247 male samples and 221 female samples).
 
-Below, a demographics of the cohort under study is presented stratified by sex. For simplicity, the Tumor Stage covariate was grouped as Stage I, Stage II, Stage III, Stage IV, and NA.
+Below, a demographics of the cohort under study is presented stratified by sex.
 
 ![table1]()
 
