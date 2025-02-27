@@ -62,7 +62,7 @@ Below, a schematic of the pipeline used in the analysis is presented. In particu
 Only primary tumors samples were downloaded excluding normal and metastasis samples with a total of 474 samples. Also, samples from patients that were subjected to prior treatments before the collection and sequencing were excluded. 
 The clinical covariantes considered in this study are the following: sex, age, race, prior malignancy, tumor site, tumor stage, OS time, and survival status. Therefore, samples with missing data were excluded, rounding up a total of 468 samples (247 male samples and 221 female samples).
 
-Below, a demographics of the cohort under study is presented stratified by sex.
+Below, a demographics of the cohort under study is presented stratified by sex. All clinical data appear to be distributed homogeneously between male and female patients.
 
 ![table1](https://github.com/manal-agdada/TCGA_COAD_sex_differences/blob/main/Figures/table1_patient_characteristics.png)
 
