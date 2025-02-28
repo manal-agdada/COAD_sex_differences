@@ -54,7 +54,7 @@ Below, a schematic of the pipeline used in the analysis is presented. In particu
 3. Functional enrichment analysis
 4. Survival analysis with Cox PH regression models and Kaplan-Meier curves
 
-![workflow](https://github.com/manal-agdada/TCGA_COAD_sex_differences/blob/main/Figures/workflow.png)
+![workflow](https://github.com/manal-agdada/TCGA_COAD_sex_differences/blob/main/Figures/figure1_workflow.png)
 
 
 ### **Selection, preprocessing, normalization, and filtering**
