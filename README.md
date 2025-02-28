@@ -84,6 +84,10 @@ Also, the heatmap of the top 100 deregulated genes is shown below.
 
 ![heatmap](https://github.com/manal-agdada/TCGA_COAD_sex_differences/blob/main/Figures/heatmap_top100DEGs.png)
 
+Although the study is specifically investigating biological differences between male and female samples, some genes need to be taken out of the analysis for the rest of the workflow because of their exclusive expression in one of the two sexes. Therefore, the rest of the analysis is done on genes located on autosomes and X chromosome, except for XIST.
+
+
+
 ### **Functional enrichment analysis**
 
 ### **Survival analysis**
