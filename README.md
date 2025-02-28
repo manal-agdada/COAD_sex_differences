@@ -114,7 +114,7 @@ A preliminary Kaplan-Meier (KM) curve was computed to assess whether sex was ass
 
 ![figure10](https://github.com/manal-agdada/TCGA_COAD_sex_differences/blob/main/Figures/figure10_KM_gender_OS.png)
 
-To evaluate the effect of individual DEGs on overall survival, Cox proportional hazard models were built. In particular, the models were built separately for the male and female cohort adjusting for clinical covariates that might act as potential confounders. To be more specific, clinical covariates used in the Cox PH models  are the following:
+To evaluate the effect of individual DEGs on overall survival, Cox proportional hazard models were built. In particular, the models were built separately for the male and female cohort adjusting for clinical covariates that might act as potential confounders. To be more specific, clinical covariates used in the Cox PH models are the following:
 
 - race (white, black/AA, other)
 - age (<= 50, > 50)
