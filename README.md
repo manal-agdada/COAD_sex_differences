@@ -74,21 +74,39 @@ Differential expression analysis was run to identify genes that are differential
 
 Below, a barplot of the top 50 DEGs based on logFC and localization in the genome is presented.
 
-![barplot1](https://github.com/manal-agdada/TCGA_COAD_sex_differences/blob/main/Figures/barplot_distribution_DEGs.png)
+![figure2](https://github.com/manal-agdada/TCGA_COAD_sex_differences/blob/main/Figures/figure2_barplot_distribution_DEGs.png)
 
 Below, the volcano plot showing the genes differentially expressed in males compared to females in terms of statistical significance (-log10FDR) and logFC is presented, highlighting the most significantly changing genes.
 
-![volcanoplot](https://github.com/manal-agdada/TCGA_COAD_sex_differences/blob/main/Figures/volcanoplot_DEGs.png)
+![figure3](https://github.com/manal-agdada/TCGA_COAD_sex_differences/blob/main/Figures/figure3_volcanoplot_DEGs.png)
 
 Also, the heatmap of the top 100 deregulated genes is shown below.
 
-![heatmap](https://github.com/manal-agdada/TCGA_COAD_sex_differences/blob/main/Figures/heatmap_top100DEGs.png)
+![figure4](https://github.com/manal-agdada/TCGA_COAD_sex_differences/blob/main/Figures/figure4_heatmap_top100DEGs.png)
 
-Although the study is specifically investigating biological differences between male and female samples, some genes need to be taken out of the analysis for the rest of the workflow because of their exclusive expression in one of the two sexes. Therefore, the rest of the analysis is done on genes located on autosomes and X chromosome, except for XIST.
+Although the study is specifically investigating biological differences between male and female samples, some genes need to be taken out of the analysis for the rest of the workflow because of their exclusive expression in one of the two sexes. Therefore, the rest of the analysis is done on genes located on autosomes and X chromosome, except for *XIST*.
 
+The barplot of distribution of DEGs, the volcano plot and the heatmap were recomputed with the filtered set of DEGs that don't include *XIST* and genes located on the Y chromosome.
 
+![figure5](https://github.com/manal-agdada/TCGA_COAD_sex_differences/blob/main/Figures/figure5_barplot_distribution_DEGs_only_autosome_and_X.png)
+
+![figure6](https://github.com/manal-agdada/TCGA_COAD_sex_differences/blob/main/Figures/figure6_volcanoplot_DEGs_only_autosome_and_X.png)
+
+![figure7](https://github.com/manal-agdada/TCGA_COAD_sex_differences/blob/main/Figures/figure7_heatmap_top100DEGs_only_autosome_and_X.png)
+
+Interestingly, when comparing barplots of the top 50 DEGs by genomic location and expression changes, Y chromosome genes appear to show the most variation due to their absence in female samples. However, after removing these genes, we find that the majority of DEGs between male and female samples are located on autosomes, while X chromosome genes exhibit similar expression patterns across sexes. Notably, the heatmap of the top 100 DEGs, after filtering out *XIST* and Y-linked genes, reveals that these sex-specific genes play a role in clustering samples into distinct male and female groups.
 
 ### **Functional enrichment analysis**
+
+Functional enrichment analysis was carried out using the `TCGAanaltze_EAcomplete` function from the `TCGAbiolinks` package on the DEGs (including *XIST* and Y-linked genes). The search was done on all Gene Ontology terms (Biological Process, Cellular Component, and Molecular Function), and KEGG Pathways.
+
+Below, the barplots for Biological Process, Cellular Component, Molecular Function, and KEGG Pathway are presented for upregulated and downregulated genes, respectively.
+
+![figure8](https://github.com/manal-agdada/TCGA_COAD_sex_differences/blob/main/Figures/figure8_barplot_EA_up.png)
+
+![figure9](https://github.com/manal-agdada/TCGA_COAD_sex_differences/blob/main/Figures/figure9_barplot_EA_down.png)
+
+This analysis highlights what other studies have shown previously [4, 5], like the up-regulation of pathways related to hormonal synthesis and immune system functioning in females, confirming the idea that female patients might have a better outcome because of their immune system or the protective role of estrogen. 
 
 ### **Survival analysis**
 
