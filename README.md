@@ -110,6 +110,10 @@ This analysis highlights what other studies have shown previously [4, 5], like t
 
 ### **Survival analysis**
 
+A preliminary Kaplan-Meier (KM) curve was computed to assess whether sex was associated with overall survival (OS). However, no statistical significant association was found, likely due to limited number of events in the cohort. Regardless, there is a trend showing that male patient tend to have a worse prognosis than their counterpart.
+
+![figure10]()
+
 ## **Discussion and Conclusion**
 
 ### **Limitations of the study**
