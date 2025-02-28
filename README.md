@@ -70,6 +70,20 @@ The gene expression matrix under study comprises of 465 samples and 60660 genes.
 
 ### **Differential expression analysis**
 
+Differential expression analysis was run to identify genes that are differentially expressed between males and females in COAD. The analysis was performed using the `TCGAanalyze_DEA` function from the `TCGAbiolinks` package using `edgeR` as pipeline. A significant threshold of FDR < 0.01 and |logFC| > 1 was applied to identify 325 differentially expressed genes (DEGs), with 128 upregulated and 197 downregulated in males. Also, 276 of these DEGs are from autosomes, 19 from the X chromosome, and 26 from the Y chromosome.
+
+Below, a barplot of the top 50 DEGs based on logFC and localization in the genome is presented.
+
+![barplot1]()
+
+Below, the volcano plot showing the genes differentially expressed in males compared to females in terms of statistical significance (-log10FDR) and logFC is presented, highlighting the most significantly changing genes.
+
+![volcanoplot]()
+
+Also, the heatmap of the top 100 deregulated genes is shown below.
+
+![heatmap]()
+
 ### **Functional enrichment analysis**
 
 ### **Survival analysis**
