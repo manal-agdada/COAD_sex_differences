@@ -43,7 +43,7 @@ This project is carried out using R 4.4.2 and the following R packages:
 
 ## **Data sources and workflow of the analysis**
 
-RNA-seq data of the TCGA-COAD cohort was downloaded directly into R using the Bioconductor package `TCGAbiolinks`. Metadata with survival information was downloaded from UCSC XENA and can be found in the [Data folder]() alongside the processed metadata dataframe used for the analysis in this study.
+RNA-seq data of the TCGA-COAD cohort was downloaded directly into R using the Bioconductor package `TCGAbiolinks`. Metadata with survival information was downloaded from UCSC XENA and can be found in the [Data folder](https://github.com/manal-agdada/TCGA_COAD_sex_differences/tree/main/Data) alongside the processed metadata dataframe used for the analysis in this study.
 
 Only primary tumor samples were directly downloaded to avoid biases from the presence of normal or metastatic samples.
 
