@@ -112,7 +112,19 @@ This analysis highlights what other studies have shown previously [4, 5], like t
 
 A preliminary Kaplan-Meier (KM) curve was computed to assess whether sex was associated with overall survival (OS). However, no statistical significant association was found, likely due to limited number of events in the cohort. Regardless, there is a trend showing that male patient tend to have a worse prognosis than their counterpart.
 
-![figure10]()
+![figure10](https://github.com/manal-agdada/TCGA_COAD_sex_differences/blob/main/Figures/figure10_KM_gender_OS.png)
+
+To evaluate the effect of individual DEGs on overall survival, Cox proportional hazard models were built. In particular, the models were built separately for the male and female cohort adjusting for clinical covariates that might act as potential confounders. To be more specific, clinical covariates used in the Cox PH models  are the following:
+
+- race (white, black/AA, other)
+- age (<= 50, > 50)
+- prior malignancy (no, yes)
+- tumor stage (stage I, stage II, stage III, stage IV, other)
+- primary site (right colon (proximal), transverse colon, left colon (distal))
+
+Also, DEGs were categorized into high and low expression groups based on median value of expression.
+
+Univariate Cox proportional hazards regression analysis showed that ... genes were statistically significantly correlated with overall survival at a p-value < 0.01. An FDR threshold < 0.01 further filtered out the candidate gene list to ... 
 
 ## **Discussion and Conclusion**
 
