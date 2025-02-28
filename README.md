@@ -74,15 +74,15 @@ Differential expression analysis was run to identify genes that are differential
 
 Below, a barplot of the top 50 DEGs based on logFC and localization in the genome is presented.
 
-![barplot1]()
+![barplot1](https://github.com/manal-agdada/TCGA_COAD_sex_differences/blob/main/Figures/barplot_distribution_DEGs.png)
 
 Below, the volcano plot showing the genes differentially expressed in males compared to females in terms of statistical significance (-log10FDR) and logFC is presented, highlighting the most significantly changing genes.
 
-![volcanoplot]()
+![volcanoplot](https://github.com/manal-agdada/TCGA_COAD_sex_differences/blob/main/Figures/volcanoplot_DEGs.png)
 
 Also, the heatmap of the top 100 deregulated genes is shown below.
 
-![heatmap]()
+![heatmap](https://github.com/manal-agdada/TCGA_COAD_sex_differences/blob/main/Figures/heatmap_top100DEGs.png)
 
 ### **Functional enrichment analysis**
 
