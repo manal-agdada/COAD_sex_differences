@@ -54,7 +54,7 @@ Below, a schematic of the pipeline used in the analysis is presented. In particu
 3. Functional enrichment analysis
 4. Survival analysis with Cox PH regression models and Kaplan-Meier curves
 
-![workflow]()
+![workflow](Figures/workflow.png)
 
 
 ### **Selection, preprocessing, normalization, and filtering**
@@ -64,7 +64,7 @@ The clinical covariantes considered in this study are the following: sex, age, r
 
 Below, a demographics of the cohort under study is presented stratified by sex. All clinical data appear to be distributed homogeneously between male and female patients.
 
-![table1](https://github.com/manal-agdada/TCGA_COAD_sex_differences/blob/main/Figures/table1_demographics.png)
+![table1](Figures/table1_demographics.png)
 
 The gene expression matrix under study comprises of 465 samples and 60660 genes. Normalization was applied using the `TCGAanalyze_Normalization` function from the `TCGAbiolinks` package accounting for sequencing depth and gene length. After normalization, 38691 genes were removed as lowly expressed genes, rounding up to a total of 21969 genes that will be used for subsequent analysis.
 
@@ -74,25 +74,25 @@ Differential expression analysis was run to identify genes that are differential
 
 Below, a barplot of the top 50 DEGs based on logFC and localization in the genome is presented.
 
-![figure2](https://github.com/manal-agdada/TCGA_COAD_sex_differences/blob/main/Figures/figure2_barplot_distribution_DEGs.png)
+![figure2](Figures/figure2_barplot_distribution_DEGs.png)
 
 Below, the volcano plot showing the genes differentially expressed in males compared to females in terms of statistical significance (-log10FDR) and logFC is presented, highlighting the most significantly changing genes.
 
-![figure3](https://github.com/manal-agdada/TCGA_COAD_sex_differences/blob/main/Figures/figure3_volcanoplot_DEGs.png)
+![figure3](Figures/figure3_volcanoplot_DEGs.png)
 
 Also, the heatmap of the top 100 deregulated genes is shown below.
 
-![figure4](https://github.com/manal-agdada/TCGA_COAD_sex_differences/blob/main/Figures/figure4_heatmap_top100DEGs.png)
+![figure4](Figures/figure4_heatmap_top100DEGs.png)
 
 Although the study is specifically investigating biological differences between male and female samples, some genes need to be taken out of the analysis for the rest of the workflow because of their exclusive expression in one of the two sexes. Therefore, the rest of the analysis is done on genes located on autosomes and X chromosome, except for *XIST*.
 
 The barplot of distribution of DEGs, the volcano plot and the heatmap were recomputed with the filtered set of DEGs that don't include *XIST* and genes located on the Y chromosome.
 
-![figure5](https://github.com/manal-agdada/TCGA_COAD_sex_differences/blob/main/Figures/figure5_barplot_distribution_DEGs_only_autosome_and_X.png)
+![figure5](Figures/figure5_barplot_distribution_DEGs_only_autosome_and_X.png)
 
-![figure6](https://github.com/manal-agdada/TCGA_COAD_sex_differences/blob/main/Figures/figure6_volcanoplot_DEGs_only_autosome_and_X.png)
+![figure6](Figures/figure6_volcanoplot_DEGs_only_autosome_and_X.png)
 
-![figure7](https://github.com/manal-agdada/TCGA_COAD_sex_differences/blob/main/Figures/figure7_heatmap_top100DEGs_only_autosome_and_X.png)
+![figure7](Figures/figure7_heatmap_top100DEGs_only_autosome_and_X.png)
 
 Interestingly, when comparing barplots of the top 50 DEGs by genomic location and expression changes, Y chromosome genes appear to show the most variation due to their absence in female samples. However, after removing these genes, we find that the majority of DEGs between male and female samples are located on autosomes, while X chromosome genes exhibit similar expression patterns across sexes. Notably, the heatmap of the top 100 DEGs, after filtering out *XIST* and Y-linked genes, reveals that these sex-specific genes play a role in clustering samples into distinct male and female groups.
 
@@ -102,9 +102,9 @@ Functional enrichment analysis was carried out using the `TCGAanaltze_EAcomplete
 
 Below, the barplots for Biological Process, Cellular Component, Molecular Function, and KEGG Pathway are presented for upregulated and downregulated genes, respectively.
 
-![figure8](https://github.com/manal-agdada/TCGA_COAD_sex_differences/blob/main/Figures/figure8_barplot_EA_up.png)
+![figure8](Figures/figure8_barplot_EA_up.png)
 
-![figure9](https://github.com/manal-agdada/TCGA_COAD_sex_differences/blob/main/Figures/figure9_barplot_EA_down.png)
+![figure9](Figures/figure9_barplot_EA_down.png)
 
 This analysis highlights what other studies have shown previously [4, 5], like the up-regulation of pathways related to hormonal synthesis and immune system functioning in females, confirming the idea that female patients might have a better outcome because of their immune system or the protective role of estrogen. 
 
@@ -112,7 +112,7 @@ This analysis highlights what other studies have shown previously [4, 5], like t
 
 A preliminary Kaplan-Meier (KM) curve was computed to assess whether sex was associated with overall survival (OS). However, no statistical significant association was found, likely due to limited number of events in the cohort. Regardless, there is a trend showing that male patient tend to have a worse prognosis than their counterpart.
 
-![figure10](https://github.com/manal-agdada/TCGA_COAD_sex_differences/blob/main/Figures/figure10_KM_gender_OS.png)
+![figure10](Figures/figure10_KM_gender_OS.png)
 
 To evaluate the effect of individual DEGs on overall survival, Cox proportional hazard models were built. In particular, the models were built separately for the male and female cohort adjusting for clinical covariates that might act as potential confounders. To be more specific, clinical covariates used in the Cox PH models are the following:
 
