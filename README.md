@@ -64,7 +64,7 @@ The clinical covariantes considered in this study are the following: sex, age, r
 
 Below, a demographics of the cohort under study is presented stratified by sex. All clinical data appear to be distributed homogeneously between male and female patients.
 
-![table1]()
+![table1](https://github.com/manal-agdada/TCGA_COAD_sex_differences/blob/main/Figures/table1_demographics.png)
 
 The gene expression matrix under study comprises of 465 samples and 60660 genes. Normalization was applied using the `TCGAanalyze_Normalization` function from the `TCGAbiolinks` package accounting for sequencing depth and gene length. After normalization, 38691 genes were removed as lowly expressed genes, rounding up to a total of 21969 genes that will be used for subsequent analysis.
 
