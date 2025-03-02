@@ -120,7 +120,7 @@ Interestingly, when comparing barplots of the top 50 DEGs by genomic location an
 
 ## **Functional enrichment analysis**
 
-Functional enrichment analysis was carried out using the `TCGAanaltze_EAcomplete` function from the `TCGAbiolinks` package on the DEGs (including *XIST* and Y-linked genes). The search was done on all Gene Ontology terms (Biological Process, Cellular Component, and Molecular Function), and KEGG Pathways.
+Functional enrichment analysis was carried out using the `TCGAanalyze_EAcomplete` function from the `TCGAbiolinks` package on the DEGs (including *XIST* and Y-linked genes). The search was done on all Gene Ontology terms (Biological Process, Cellular Component, and Molecular Function), and KEGG Pathways.
 
 Below, the barplots for Biological Process, Cellular Component, Molecular Function, and KEGG Pathway are presented for upregulated and downregulated genes, respectively.
 
@@ -128,16 +128,16 @@ Below, the barplots for Biological Process, Cellular Component, Molecular Functi
 
 ![figure9](Figures/figure9_barplot_EA_down.png)
 
-This analysis highlights what other studies have shown previously [4, 5], like the up-regulation of pathways related to hormonal synthesis and immune system functioning in females, confirming the idea that female patients might have a better outcome because of their immune system or the protective role of estrogen. 
+This analysis highlights what other studies have shown previously [4, 5], like the up-regulation of pathways related to hormonal synthesis and immune system functioning in females, confirming the idea that female patients might have a better outcome because of their immune system or the protective role of estrogen.
 
 
 ## **Survival analysis**
 
-A preliminary Kaplan-Meier (KM) curve was computed to assess whether sex was associated with overall survival (OS). However, no statistical significant association was found, likely due to limited number of events in the cohort. Regardless, there is a trend showing that male patient tend to have a worse prognosis than their counterpart.
+A preliminary Kaplan-Meier (KM) curve was computed to assess whether sex was associated with overall survival (OS). However, no statistically significant association was found, likely due to the limited number of events in the cohort. Regardless, there is a trend showing that male patients tend to have a worse prognosis than their female counterparts.
 
 ![figure10](Figures/figure10_KM_gender_OS.png)
 
-To evaluate the effect of individual DEGs on overall survival, Cox proportional hazard models were built. In particular, the models were built separately for the male and female cohort adjusting for clinical covariates that might act as potential confounders. To be more specific, clinical covariates used in the Cox PH models are the following:
+To evaluate the effect of individual DEGs on overall survival, Cox proportional hazard models were built. The models were constructed separately for the male and female cohort, adjusting for clinical covariates that might act as potential confounders. The following clinical covariates were included:
 
 - race (white, black/AA, other)
 - age (<= 50, > 50)
@@ -145,9 +145,9 @@ To evaluate the effect of individual DEGs on overall survival, Cox proportional 
 - tumor stage (stage I, stage II, stage III, stage IV, other)
 - primary site (right colon (proximal), transverse colon, left colon (distal))
 
-Also, DEGs were categorized into high and low expression groups based on median value of expression.
+Also, DEGs were categorized into high and low expression groups based on the median expression value.
 
-Univariate Cox proportional hazards regression analysis showed that ... genes were statistically significantly correlated with overall survival at a p-value < 0.01. An FDR threshold < 0.01 further filtered out the candidate gene list to ... 
+Univariate Cox proportional hazards regression analysis identified several genes significantly correlated with overall survival at a p-value < 0.05. An FDR threshold < 0.01 further refined the candidate gene list.
 
 
 ## **Discussion and Conclusion**
