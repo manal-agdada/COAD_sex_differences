@@ -86,7 +86,7 @@ A summary of the cohort's clinical charateristics, stratified by sex, is shown b
 The gene expression matrix initially contained 60660 genes across 465 samples. Normalization was performed using the `TCGAanalyze_Normalization` function from the `TCGAbiolinks` package accounting for sequencing depth and gene length. After normalization, 38691 genes were removed as lowly expressed genes, leaving 21969 genes for downstream analysis.
 
 
-### **Differential expression analysis**
+## **Differential expression analysis**
 
 Differential expression analysis was run to identify genes that are differentially expressed between males and females in COAD. The analysis was performed using the `TCGAanalyze_DEA` function from the `TCGAbiolinks` package using `edgeR` as pipeline. A significant threshold of FDR < 0.01 and |logFC| > 1 was applied to identify 325 differentially expressed genes (DEGs), with 128 upregulated and 197 downregulated in males. Also, 276 of these DEGs are located on autosomes, 19 on the X chromosome, and 26 on Y chromosome.
 
@@ -118,7 +118,7 @@ The barplot of distribution of DEGs, the volcano plot and the heatmap were recom
 Interestingly, when comparing barplots of the top 50 DEGs by genomic location and expression changes, Y chromosome genes appear to show the most variation due to their absence in female samples. However, after removing these genes, we find that the majority of DEGs between male and female samples are located on autosomes, while X chromosome genes exhibit similar expression patterns across sexes. Notably, the heatmap of the top 100 DEGs, after filtering out *XIST* and Y-linked genes, reveals that these sex-specific genes play a role in clustering samples into distinct male and female groups.
 
 
-### **Functional enrichment analysis**
+## **Functional enrichment analysis**
 
 Functional enrichment analysis was carried out using the `TCGAanaltze_EAcomplete` function from the `TCGAbiolinks` package on the DEGs (including *XIST* and Y-linked genes). The search was done on all Gene Ontology terms (Biological Process, Cellular Component, and Molecular Function), and KEGG Pathways.
 
@@ -131,7 +131,7 @@ Below, the barplots for Biological Process, Cellular Component, Molecular Functi
 This analysis highlights what other studies have shown previously [4, 5], like the up-regulation of pathways related to hormonal synthesis and immune system functioning in females, confirming the idea that female patients might have a better outcome because of their immune system or the protective role of estrogen. 
 
 
-### **Survival analysis**
+## **Survival analysis**
 
 A preliminary Kaplan-Meier (KM) curve was computed to assess whether sex was associated with overall survival (OS). However, no statistical significant association was found, likely due to limited number of events in the cohort. Regardless, there is a trend showing that male patient tend to have a worse prognosis than their counterpart.
 
