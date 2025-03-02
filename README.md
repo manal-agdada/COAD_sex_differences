@@ -12,7 +12,7 @@ Understanding the molecular basis of these differences is essential for improvin
 
 ## **Biological question**
 
-This study is guided by the following question: Are there fundamental biological differences between males and females in colon adenocarcinoma that influence disease progression and survival?
+This study is guided by the following question: *Are there fundamental biological differences between males and females in colon adenocarcinoma that influence disease progression and survival?*
 
 Specifically, this research investigates whether sex-specific gene expression patterns correlate with differences in prognosis and whether distinct gene signatures for males and females can predict OS outcomes.
 
