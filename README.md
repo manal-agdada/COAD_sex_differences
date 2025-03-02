@@ -145,9 +145,16 @@ To evaluate the effect of individual DEGs on overall survival, Cox proportional 
 - tumor stage (stage I, stage II, stage III, stage IV, other)
 - primary site (right colon (proximal), transverse colon, left colon (distal))
 
-Also, DEGs were categorized into high and low expression groups based on the median expression value.
+Also, DEGs were categorized into high and low expression groups based on the median expression value for KM curves.
 
-Univariate Cox proportional hazards regression analysis identified several genes significantly correlated with overall survival at a p-value < 0.05. An FDR threshold < 0.01 further refined the candidate gene list.
+Univariate Cox proportional hazards regression analysis, in the female and male cohort separately, identified several genes significantly correlated with overall survival with a FDR threshold < 0.1. In particular, 9 genes were identified in the female cohort and 66 genes in the male cohort. 
+
+To further refine these signatures genes, multivariate Cox proportional hazards models were built, one per cohort. Starting from all the genes found significant in the previous step and builing the models using backward selection.
+
+Below, the forest plot of the final multivariate model on the female cohort is represented:
+
+Below, the forest plot of the final multivariate model on the male cohort in represented:
+
 
 
 ## **Discussion and Conclusion**
