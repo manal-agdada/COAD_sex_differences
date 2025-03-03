@@ -106,7 +106,7 @@ A heatmap of the top 100 deregulated genes is shown below:
 
 Although the study is specifically investigating biological differences between male and female samples, some genes need to be taken out of the analysis for the rest of the workflow because of their exclusive expression in one of the two sexes. Therefore, the rest of the analysis is done on genes located on autosomes and X chromosome, except for *XIST*.
 
-The barplot of distribution of DEGs, the volcano plot and the heatmap were recomputed with the filtered set of DEGs that don't include *XIST* and genes located on the Y chromosome.
+The barplot of distribution of DEGs, the volcano plot and the heatmap were recomputed with the filtered set of DEGs that doesn't include *XIST* and genes located on the Y chromosome.
 
 ![figure5](Figures/figure5_barplot_distribution_DEGs_only_autosome_and_X.png)
 
