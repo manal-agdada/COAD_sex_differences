@@ -146,20 +146,50 @@ To evaluate the effect of individual DEGs on overall survival, Cox proportional 
 
 Also, DEGs were categorized into high and low expression groups based on the median expression value.
 
-Univariate Cox proportional hazards regression analysis, in the female and male cohort separately, identified several genes significantly correlated with overall survival with a FDR threshold < 0.1. In particular, 9 genes were identified in the female cohort and 66 genes in the male cohort. 
+Univariate Cox proportional hazards regression analysis was performed separately for male and female cohorts to identify genes significantly associated with overall survival (OS), using a p-value threshold of <0.05. This analysis identified 9 significant genes in the female cohort and 14 in the male cohort.
 
-To further refine these signatures genes, multivariate Cox proportional hazards models were built, one per cohort. Starting from all the genes found significant in the previous step and builing the models using backward selection.
+To refine these gene signatures, multivariate Cox proportional hazards models were built for each cohort. Backward selection was applied, starting with all genes identified as significant in the univariate analysis.
 
-Below, the forest plot of the final multivariate model on the female cohort is represented:
+In the female cohort, 5 genes (*KLK5*, *PWRN1*, *LHX3*, *ADAD2*, and *KRT38*) remained statistically significant for OS after multivariate adjustment. The proportional hazards (PH) assumption was verified for the final model using Schoenfeld residuals.
 
-Below, the forest plot of the final multivariate model on the male cohort in represented:
+Below is the forest plot of the final multivariate model for the female cohort:
 
+![figure11](Figures/figure11_forestplot_mva_female.png)
+
+Kaplan-Meier (KM) survival curves for the 5 significant genes were also generated: 
+
+![figure12](Figures/figure12_KM_sig_genes_female1.png)
+
+![figure13](Figures/figure13_KM_sig_genes_female2.png)
+
+In the male cohort, only one gene (*PAEP*) remained statistically significant in the final multivariate model. Notably, low expression of PAEP was associated with improved survival. The PH assumption was verified for the final model.
+
+Below is the forest plot of the final multivariate model for the male cohort:
+
+![figure14](Figures/figure14_forestplot_mva_male.png)
+
+KM survival curves for *PAEP* were computed:
+
+![figure15](Figures/figure15_KM_sig_genes_male.png)
 
 
 ## **Discussion and Conclusion**
 
+This study investigates the potential role of sex-specific gene expression in influencing survival outcomes for colon adenocarcinoma (COAD) patients. While no significant association was found between sex and OS directly, survival analysis revealed distinct gene expression patterns that correlate with prognosis in males and females separately. These findings suggest that sex-specific molecular signatures may play an important role in disease progression and could contribute to personalized prognostic models for COAD.
+
+In particular, *PAEP* (Progestagen-Associated Endometrial Protein) emerged as the only significant gene in the male cohort. Low expression of *PAEP* was associated with better survival outcomes (Figure 15). Interestingly, *PAEP* was one of the most significantly downregulated genes in male COAD samples (Figure 3). This suggests that higher expression of *PAEP* may contribute to worse prognosis, potentially through a pro-tumorigenic mechanism.
+
+Conversely, *LHX3* (LIM Homeobox 3) was identified in the female cohort, where low expression correlated with improved survival (Figure 12). However, *LHX3* also appears to be downregulated in female COAD samples (Figure 6). This paradoxical finding suggests that *LHX3* may have a context-dependent role, possibly acting as a tumor suppressor under normal conditions but being reprogrammed in cancer. Further studies are needed to elucidate its function in COAD progression.
+
+Moving forward, the identification of robust sex-specific gene signatures could provide valuable insights into COAD biology and aid in the development of precision medicine strategies for male and female patients.
+
 
 ### **Limitations of the study**
+
+- Sample Size: although the TCGA-COAD dataset includes 465 samples, stratification by sex reduces statistical power, particularly for detecting weaker associations.
+- Clinical Diversity: the TCGA cohort may not fully capture the heterogeneity of COAD patients in different populations.
+- Survival Events: the number of survival events (deaths) in the dataset is relatively low, which may limit the robustness of survival predictions.
+- External Validation: the findings are based solely on TCGA data and require validation in independent cohorts to confirm their clinical relevance.
 
 
 ## **References**
