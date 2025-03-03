@@ -158,9 +158,9 @@ Below is the forest plot of the final multivariate model for the female cohort:
 
 Kaplan-Meier (KM) survival curves for the 5 significant genes were also generated: 
 
-![figure12](Figures/figure12_KM_sig_genes_female1.png)
+![figure12](Figures/figure12_KM_sig_genes_female_1.png)
 
-![figure13](Figures/figure13_KM_sig_genes_female2.png)
+![figure13](Figures/figure13_KM_sig_genes_female_2.png)
 
 In the male cohort, only one gene (*PAEP*) remained statistically significant in the final multivariate model. Notably, low expression of PAEP was associated with improved survival. The PH assumption was verified for the final model.
 
