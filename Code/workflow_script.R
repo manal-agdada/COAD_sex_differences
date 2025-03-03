@@ -68,7 +68,7 @@ grViz("
       fontname = 'helvetica-bold'
 
       node [shape=rectangle, style=filled, color=black, fillcolor = '#ff9999', fontcolor = '#2a6496']
-      uva_male [label = 'UVA Cox Analysis\n(FDR < 0.01)']
+      uva_male [label = 'UVA Cox Analysis']
       mva_male [label = 'MVA Cox Analysis\nwith\nBackward Selection']
       km_male [label = 'Kaplan-Meier Analysis']
 
@@ -83,7 +83,7 @@ grViz("
       fontname = 'helvetica-bold'
 
       node [shape=rectangle, style=filled, color=black, fillcolor = '#ffb3e6', fontcolor = '#2a6496']
-      uva_female [label = 'UVA Cox Analysis\n(FDR < 0.01)']
+      uva_female [label = 'UVA Cox Analysis']
       mva_female [label = 'MVA Cox Analysis\nwith\nBackward Selection']
       km_female [label = 'Kaplan-Meier Analysis']
 
