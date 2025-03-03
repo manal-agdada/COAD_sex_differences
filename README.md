@@ -44,7 +44,6 @@ This project was conducted using R 4.4.2 and the following R packages:
   - `viridis`
   - `prodlim`
   - `survival`
-  - `kableExtra`
   - `DiagrammeR`
 
 
