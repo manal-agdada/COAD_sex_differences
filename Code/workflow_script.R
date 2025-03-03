@@ -69,7 +69,7 @@ grViz("
 
       node [shape=rectangle, style=filled, color=black, fillcolor = '#ff9999', fontcolor = '#2a6496']
       uva_male [label = 'UVA Cox Analysis\n(FDR < 0.01)']
-      mva_male [label = 'MVA Cox Analysis\nwith\nStepwise Forward Selection']
+      mva_male [label = 'MVA Cox Analysis\nwith\nBackward Selection']
       km_male [label = 'Kaplan-Meier Analysis']
 
       survival -> uva_male -> mva_male -> km_male
@@ -84,7 +84,7 @@ grViz("
 
       node [shape=rectangle, style=filled, color=black, fillcolor = '#ffb3e6', fontcolor = '#2a6496']
       uva_female [label = 'UVA Cox Analysis\n(FDR < 0.01)']
-      mva_female [label = 'MVA Cox Analysis\nwith\nStepwise Forward Selection']
+      mva_female [label = 'MVA Cox Analysis\nwith\nBackward Selection']
       km_female [label = 'Kaplan-Meier Analysis']
 
       survival -> uva_female -> mva_female -> km_female
