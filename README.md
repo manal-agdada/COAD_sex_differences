@@ -127,12 +127,12 @@ Below, the barplots for Biological Process, Cellular Component, Molecular Functi
 
 ![figure9](Figures/figure9_barplot_EA_down.png)
 
-This analysis highlights what other studies have shown previously [4, 5], like the up-regulation of pathways related to hormonal synthesis and immune system functioning in females, confirming the idea that female patients might have a better outcome because of their immune system or the protective role of estrogen.
+This analysis highlights what other studies have shown previously [4, 5], such as the up-regulation of pathways related to hormonal synthesis and immune system functioning in females, confirming the idea that female patients might have a better outcome because of their immune system or the protective role of estrogen.
 
 
 ## **Survival analysis**
 
-A preliminary Kaplan-Meier (KM) curve was computed to assess whether sex was associated with overall survival (OS). However, no statistically significant association was found, likely due to the limited number of events in the cohort. Regardless, there is a trend showing that male patients tend to have a worse prognosis than their female counterparts.
+A preliminary Kaplan-Meier (KM) curve was computed to assess whether sex was associated with OS. However, no statistically significant association was found, likely due to the limited number of events in the cohort. Regardless, there is a trend showing that male patients tend to have a worse prognosis than their female counterparts.
 
 ![figure10](Figures/figure10_KM_gender_OS.png)
 
